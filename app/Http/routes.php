@@ -11,9 +11,27 @@
 |
 */
 
+
+
 Route::get('/', 'WelcomeController@index');
 
+
+
 Route::get('home', 'HomeController@index');
+
+Route::get('test','WelcomeController@test');
+
+Route::get('acerca','PaginasController@acerca');
+
+Route::get('contacto','PaginasController@contacto');
+
+Route::resource('articulos','ArticulosController');
+
+Route::resource('log','LogController');
+
+Route::resource('usuario','UsuarioController');
+
+
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',
